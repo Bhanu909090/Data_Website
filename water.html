@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Water consumption</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <!-- <img src="images/logo.png" class="navbar-brand-image img-fluid" alt="Tiya Golf Club"> -->
+                    <span class="navbar-brand-text">
+                        Data Centers
+                        <small>and Environment</small>
+                    </span>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_1">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_2">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_3">Feedback Loops</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_4">Methodology</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#section_5">Imp. Of Study</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Review</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="energy.html">Power consumption</a></li>
+                                <li><a class="dropdown-item" href="water.html">Water Consumption</a></li>
+                                <li><a class="dropdown-item" href="waste.html">E waste</a></li>
+                                <li><a class="dropdown-item" href="event-detail.html">Conclusion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#3D405B" fill-opacity="1"
+                    d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+
+
+        <section class="hero-section hero-50 d-flex justify-content-center align-items-center" id="section_1"
+            style="background-image: url(images/pexels-brett-sayles-2881232.jpg);">
+
+            <div class="section-overlay"></div>
+
+            <svg viewBox="0 0 1962 178" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path fill="#3D405B" d="M 0 114 C 118.5 114 118.5 167 237 167 L 237 167 L 237 0 L 0 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 236 167 C 373 167 373 128 510 128 L 510 128 L 510 0 L 236 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 509 128 C 607 128 607 153 705 153 L 705 153 L 705 0 L 509 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 704 153 C 812 153 812 113 920 113 L 920 113 L 920 0 L 704 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 919 113 C 1048.5 113 1048.5 148 1178 148 L 1178 148 L 1178 0 L 919 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 1177 148 C 1359.5 148 1359.5 129 1542 129 L 1542 129 L 1542 0 L 1177 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#3D405B" d="M 1541 129 C 1751.5 129 1751.5 138 1962 138 L 1962 138 L 1962 0 L 1541 0 Z"
+                    stroke-width="0"></path>
+            </svg>
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+
+                        <h1 class="text-white mb-4 pb-2">Water Consumption by Data Centers</h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <svg viewBox="0 0 1962 178" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path fill="#ffffff" d="M 0 114 C 118.5 114 118.5 167 237 167 L 237 167 L 237 0 L 0 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 236 167 C 373 167 373 128 510 128 L 510 128 L 510 0 L 236 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 509 128 C 607 128 607 153 705 153 L 705 153 L 705 0 L 509 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 704 153 C 812 153 812 113 920 113 L 920 113 L 920 0 L 704 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 919 113 C 1048.5 113 1048.5 148 1178 148 L 1178 148 L 1178 0 L 919 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 1177 148 C 1359.5 148 1359.5 129 1542 129 L 1542 129 L 1542 0 L 1177 0 Z"
+                    stroke-width="0"></path>
+                <path fill="#ffffff" d="M 1541 129 C 1751.5 129 1751.5 138 1962 138 L 1962 138 L 1962 0 L 1541 0 Z"
+                    stroke-width="0"></path>
+            </svg>
+        </section>
+
+
+        <section class="events-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12">
+                        <h2 class="mb-lg-5 mb-4">Why Do Data Centres Need Water?</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-5 mb-lg-0" style="width: 100%;">
+
+                        <div class="custom-block-info">
+
+                            <p class="mb-0">Data centres operate non-stop and house thousands of
+                                servers that generate
+                                intense heat. If these servers are not cooled effectively, they risk overheating, which
+                                can lead to equipment damage, performance issues, or even full system shutdowns. Water
+                                is essential in many data centres because it provides an efficient and cost-effective
+                                method of heat removal.
+
+                                Most modern data centres use evaporative cooling systems, where warm air is passed
+                                through water-saturated pads or towers. As the water evaporates, it cools the air, which
+                                is then circulated back into the server rooms. This process is significantly more
+                                water-efficient than traditional cooling methods but still requires vast quantities of
+                                water daily.
+
+                                Key Fact: Some data centres use up to 300,000 gallons (1.1 million litres) of water per
+                                day just for cooling. That’s nearly enough to supply the daily water needs of 100,000
+                                homes.
+                            </p>
+                            <div> &ThickSpace;</div>
+                            <h3>Increased Water Consumption Due To AI</h3>
+                            <p>
+                                The rise of artificial intelligence (AI) has made water consumption even more critical.
+                                AI workloads are far more compute-intensive than regular internet tasks, which leads to
+                                higher temperatures in data centre servers. As AI chips like GPUs work harder and
+                                hotter, they require more aggressive cooling, usually with water.
+
+                                For example, a user interacting with ChatGPT 20-50 times can lead to the indirect use of
+                                500 millilitres of water (half a litre), primarily for cooling the servers that process
+                                the request.
+                            </p>
+                            <div> &ThickSpace;</div>
+                            <h3>Why Not Just Use Air?</h3>
+                            <p> Air cooling is an option, but it is often less efficient, especially in warmer climates.
+                                Using water allows data centres to maintain much more stable temperatures without the
+                                need to blast air conditioning continuously. Some large-scale operations, such as those
+                                in India and the southwestern US, prefer water cooling because it is cheaper in the long
+                                term and better at heat transfer.
+
+                                However, this efficiency comes at a cost: it significantly increases water demand,
+                                especially in regions already struggling with drought and water scarcity.</p>
+                            <div> &ThickSpace;</div>
+                            <h3> Scale of Water Use: Just How Much Water Do Data Centres Consume? </h3>
+                            <p>
+                                The water consumption of data centres is staggering, and is growing fast. With the boom
+                                in artificial intelligence (AI), cloud computing, and streaming services, demand for
+                                data processing is at an all-time high. And with it comes a surge in water use,
+                                particularly for cooling servers.
+
+                                In 2022, Google alone reported using 5.6 billion gallons (21.2 billion litres) of water
+                                across its data centres globally. This was a 20% increase from 2021.
+
+                                Microsoft consumed nearly 1.7 billion gallons (6.4 billion litres) of water globally in
+                                2022, up 34% from the year before.
+
+                                Meta Platforms (Facebook) used around 2.2 billion gallons in the same year.
+
+                                When scaled to individual users, the impact might seem small, but collectively it
+                                becomes massive:
+
+                                If one user interacts with ChatGPT 20–50 times, he can cause the indirect use of half a
+                                litre (500ml) of water. Multiply that by millions of users daily, and it becomes
+                                hundreds of millions of litres per month.
+                            </p>
+                            <div> &ThickSpace;</div>
+                            <h3> USA vs. India </h3>
+                            <p>
+                                In water-stressed regions, the impact is even more severe.
+                            <ul>
+                                <li> USA: Many large data centres are built in arid regions like Arizona and Utah, where
+                                    water is already scarce. For example, Google’s data centre in The Dalles, Oregon,
+                                    was involved in a legal dispute over water rights, as it planned to consume over 1
+                                    million gallons per day.</li>
+                                <li> India: India's data centre market is growing rapidly, with expected investments of
+                                    $8 billion by 2026, much of which is going into hyperscale facilities. These centres
+                                    rely heavily on chiller-based cooling, which uses substantial water in warmer cities
+                                    like Mumbai and Hyderabad.</li>
+                            </ul>
+                            A single hyperscale data centre in India can use over 150,000 litres of water per day,
+                            mostly for cooling purposes.
+                            </p>
+                            <div> &ThickSpace;</div>
+                            <h3>Environmental Consequences of Excessive Water Use</h3>
+                            <p>
+                            <ul>
+                                <li>Pressure on Local Water Resources</li>
+                            </ul>
+                            Data centres, especially those using evaporative cooling, consume enormous amounts of
+                            freshwater, often in direct competition with households, agriculture, and local ecosystems.
+
+                            In regions already facing droughts or water scarcity, data centres can aggravate the crisis.
+                            For example, Arizona and California, home to several massive cloud campuses are among the
+                            most water-stressed states in the U.S.
+
+                            In India, where water stress is growing, especially in urban regions like Delhi, Hyderabad,
+                            and Chennai, the demand from data centres could divert water away from public use, leading
+                            to conflicts and systemic water shortages.
+                            </p>
+                            <p>
+                            <ul>
+                                <li>Threats to Aquatic Ecosystems</li>
+                            </ul>
+                            The discharge of warm water after cooling processes can raise local water body temperatures,
+                            disrupting aquatic ecosystems by lowering oxygen levels and altering breeding cycles.
+
+                            Thermal pollution can lead to fish die-offs and changes in biodiversity near water bodies
+                            where data centres discharge heated water.
+
+                            Additionally, the use of chemical additives in cooling systems (to prevent microbial growth
+                            or corrosion) can introduce hazardous compounds into the environment if not properly
+                            treated.
+                            </p>
+                            <p>
+                            <ul>
+                                <li>Social & Regulatory Conflict</li>
+                            </ul>
+                            Data centres’ water use has sparked community resistance and legal battles, particularly
+                            when resource use is perceived as benefiting private corporations at public expense.
+
+                            In The Dalles, Oregon, a legal standoff emerged when Google’s water usage plan for its
+                            data centre became public, sparking public outcry and demands for transparency.
+
+                            In India, while regulations exist on groundwater use, enforcement is weak, and permits
+                            are sometimes granted without proper environmental assessments.</p>
+                            <div> &ThickSpace;</div>
+                            <h3>Sustainable Cooling Alternatives</h3>
+                            <p> With rising concerns around the environmental and water footprint of data centres,
+                                companies and researchers are increasingly investing in alternative cooling technologies
+                                that are both efficient and eco-friendly.
+
+                                Air Cooling and Free Cooling Techniques
+                                Air cooling, especially “free cooling”, uses ambient air instead of water or
+                                refrigerants, making it a water-efficient solution, particularly in cooler climates.
+
+                                Meta’s data centre in Luleå, Sweden, uses outside air for most of the year, reducing
+                                both water and energy usage.
+
+                                However, free cooling isn’t viable in hot or humid climates like much of India, which
+                                limits its global scalability.
+
+                                Liquid Immersion Cooling
+                                Instead of cooling the air around servers, liquid immersion cooling involves submerging
+                                server components in thermally conductive, non-electrically conductive liquids.
+
+                                This method can reduce water usage by 90–95% compared to traditional methods, while also
+                                lowering electricity costs.
+
+                                In India, startups and green-tech firms are piloting modular liquid-cooled server racks
+                                for high-density AI processing workloads.
+
+                                Direct-to-Chip (D2C) Liquid Cooling
+
+                                Another high-efficiency solution, D2C cooling, circulates water or special coolants
+                                directly over server chips using cold plates.
+
+                                Google and Meta are experimenting with D2C in their AI-focused data centres to reduce
+                                evaporation losses.
+
+                                Reuse of Waste Heat
+                                Many new-generation data centres are exploring district heating, where waste heat is
+                                reused to warm nearby buildings, greenhouses, or water systems.
+
+                                Amazon’s data centre in Dublin powers a district heating system that heats over 50,000
+                                square meters of public and private infrastructure.
+
+                                This helps with reducing emissions, conserving water, and making energy usage more
+                                circular.</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-lg-6 col-12">
+                        <div class="custom-block-image-wrap">
+                            <a href="event-detail.html">
+                                <img src="images/frederik-rosar-NDSZcCfnsbY-unsplash.jpg"
+                                    class="custom-block-image img-fluid" alt="">
+
+                                <i class="custom-block-icon bi-link"></i>
+                            </a>
+
+                            <div class="custom-block-date-wrap">
+                                <strong class="text-white">24 Feb 2023</strong>
+                            </div>
+
+                            <div class="custom-btn-wrap">
+                                <a href="event-detail.html" class="btn custom-btn">Buy Ticket</a>
+                            </div>
+                        </div> -->
+
+                    <!-- <div class="custom-block-info">
+                            <h3>Demand of Data centers (INDIA)</h3>
+
+                            <p class="mb-0">India's data center industry is experiencing rapid growth, driven by
+                                increasing digitalization, data localization mandates, and the proliferation of internet
+                                services. Key highlights include:
+                            <ul>
+                                <li> <strong>Capacity Expansion:</strong> India's data center capacity reached
+                                    approximately 1,255 MW between January and September 2024 and is projected to expand
+                                    further to around 1,600 MW by the end of 2024. </li>
+                                <li><strong>Future Projections:</strong> The capacity is expected to more than double to
+                                    2–2.3 GW by fiscal 2027.</li>
+                                <li><strong>Geographical Distribution:</strong> Major data center hubs include Navi
+                                    Mumbai, Noida, Gurgaon, Bangalore, and Hyderabad, with Navi Mumbai alone accounting
+                                    for 44% of the market.
+                                </li>
+                            </ul>
+                            </p>
+                        </div> -->
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+
+        <section class="events-section events-listing-section section-bg section-padding" id="section_3">
+            <div class="container">
+                <div class="row">
+
+                    <div class="row custom-block mb-3">
+
+                        <div class="col-lg-6 col-12 order-3 order-lg-0" style="width: 100%;">
+                            <div class="custom-block-info mt-2 mt-lg-0">
+                                <h2>Water-Related Regulations and Policy Trends</h2>
+                                <div>
+                                    &ThinSpace;</div>
+                            </div>
+
+                            <p class="mb-0">While the U.S. has environmental laws governing water withdrawals and
+                                discharge, these don’t always apply cleanly to data centres. Many states do not
+                                require companies to disclose water usage publicly, especially if they use municipal
+                                water sources.
+
+                                In most U.S. jurisdictions, tech companies aren’t required to report how much water
+                                their data centres use.
+
+                                In 2021, residents of The Dalles discovered that Google's expansion would double its
+                                water use, prompting public outrage and calls for transparency.
+
+                                This led to legislation being proposed in New York to force disclosure of water use
+                                by large data centres. </p>
+                            <div>
+                                &ThinSpace;</div>
+                        </div>
+                        <p class="mb-0">India’s data centre sector is growing rapidly, but water use policies
+                            remain poorly enforced and fragmented across states. Most centres extract water
+                            through municipal o borewell connections, but monitoring is minimal.
+
+                            Water consumption in Indian data centres is rarely measured or reported, despite the
+                            country’s rising water stress.
+
+                            Gaps in Policy
+                            No mandatory disclosure of water consumption in the IT or cloud sector.
+
+
+                            Limited enforcement of groundwater usage restrictions, even in critical zones.
+
+
+                            No national policy linking data centre development to water conservation measures.
+
+
+                            In high-risk regions like Chennai and Hyderabad, data centres operate without a
+                            sustainable water strategy, raising long-term environmental and urban planning
+                            concerns.</p>
+                        <div>&ThinSpace; </div>
+                        <h4 class="mb-0"> Trends and Proposed Solutions </h4>
+                        <div>&ThinSpace; </div>
+                        <div>
+                            <h6>
+                                <li> USA </li>
+                            </h6>
+                            <div>
+                                <ul>
+                                    <li> Bills are being introduced to require public disclosure of water consumption.
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li> Local governments (like Santa Clara, California) are limiting new data centre
+                                        permits in water-stressed zones.</li>
+                                </ul>
+                                <ul>
+                                    <li> NGOs are pushing for water-use impact assessments during site approvals.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>&ThinSpace; </div>
+                        <div>
+                            <h6>
+                                <li> India </li>
+                            </h6>
+                            <div>
+                                <ul>
+                                    <li> Proposals for Green Data Centre standards include water efficiency, but
+                                        adoption is voluntary.
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li> Some pilot projects are incorporating rainwater harvesting and treated
+                                        wastewater for non-critical cooling.
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li> The Ministry of Electronics and IT (MeitY) is considering mandatory
+                                        sustainability reporting for upcoming data centre parks.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row custom-block custom-block-bg">
+
+                <div class="col-lg-6 col-12 order-3 order-lg-0" style="width: 100%;">
+                    <div class="custom-block-info mt-2 mt-lg-0" style="width: 100%;">
+                        <h3>Comparative Analysis: Data Center Water Consumption - India vs. USA </h3>
+                        <div>
+                            &ThinSpace;</div>
+                        <h4>Overview</h4>
+                        <div>
+                            <p>Data centers in both India and the United States depend heavily on water for cooling, but
+                                there are significant differences in the scale of usage, technology adoption, regulatory
+                                frameworks, and geographic challenges related to water availability. These factors
+                                influence the environmental impact of data center operations in each country.</p>
+                        </div>
+                        &ThinSpace;
+                        <h4> Total water consumption </h4>
+                        <div>
+                            <p>In the United States, data centers collectively consume approximately 1.7 billion liters
+                                of water per day. On average, each kilowatt-hour of electricity consumed by a data
+                                center in the U.S. corresponds to 4.52 liters of water use. The country has over 2,700
+                                large-scale data centers, making its water footprint significant.
+
+                                In India, total water use is currently lower but growing rapidly. The total volume
+                                consumed by data centers is expected to reach 150.3 billion liters in 2025 and is
+                                projected to increase to 358.7 billion liters by 2030, with a compound annual growth
+                                rate (CAGR) of more than 19 percent.
+
+                                While the United States currently leads in overall water use due to the larger size of
+                                its data center industry, India's rate of increase is substantially higher. Without
+                                strong sustainability measures, India’s footprint may approach that of the United States
+                                in the coming years.
+                        </div>
+                        &ThinSpace;
+                        <h4> Cooling Technologies </h4>
+                        <div>
+                            <p>U.S. data centers have traditionally relied on evaporative cooling, which is
+                                water-intensive. Although modern facilities are beginning to adopt closed-loop and
+                                liquid cooling systems to reduce water consumption, retrofitting existing infrastructure
+                                remains a challenge.
+
+                                In India, many new data centers are opting for air-cooled chillers and other dry cooling
+                                techniques from the outset. This is in part due to the country’s existing water stress
+                                in urban areas, which discourages the use of water-heavy technologies.
+
+                                India may be better positioned to implement water-efficient technologies at scale, as
+                                much of its infrastructure is still being built. In contrast, older U.S. facilities face
+                                limitations in modernizing quickly.
+                        </div>
+                        &ThinSpace;
+                        <h4> Water Stress Regions </h4>
+                        <div>
+                            <p>In the United States, a significant number of data centers are located in states like
+                                Arizona, Utah, and California, which are already dealing with long-term water scarcity.
+                                In some regions, conflicts have emerged between municipal water needs and industrial
+                                users such as data centers.
+
+                                India faces similar pressures. Cities including Chennai, Hyderabad, and Bangalore
+                                already experience recurring water shortages and declining groundwater levels. These
+                                cities are also emerging hubs for digital infrastructure, increasing the risk of
+                                resource competition.
+
+                                Both countries face geographic vulnerabilities in terms of water availability. However,
+                                India’s higher population density intensifies the potential for disputes between public
+                                and industrial use.
+                        </div>
+                        &ThinSpace;
+                        <h4> Policy and Regulation </h4>
+                        <div>
+                            <p>Regulation in the United States varies widely by state. Some states offer tax incentives
+                                or subsidies to data center operators without requiring strong environmental standards.
+                                However, recent legislative proposals, such as New York’s 2024 bill, aim to tie tax
+                                breaks and other benefits to sustainability metrics, including water use efficiency.
+
+                                India currently lacks a unified national policy on data center water consumption. Most
+                                practices are shaped by market forces or voluntary compliance with green building
+                                certifications, such as IGBC or LEED, which may incorporate water management benchmarks.
+
+                                While U.S. policy is starting to connect environmental performance with government
+                                support, India is still in the early stages of formulating such frameworks. The absence
+                                of mandatory water efficiency standards in India presents a regulatory gap.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <button class="btn custom-btn smoothscroll me-3"><a href="waste.html"> Next page </a> </button>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#81B29A" fill-opacity="1"
+                d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+            </path>
+        </svg>
+    </footer>
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

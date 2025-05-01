@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electricity Demand in Data Centers</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #fff8f2;
+      color: #4a2c18;
+    }
+
+    h2, h3 {
+      text-align: center;
+      color: #a0522d;
+    }
+
+    .chart-container {
+      width: 100%;
+      max-width: 900px;
+      height: 600px;
+      margin: 0 auto 40px;
+      background: #fff7ea;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .info-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff7ea;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .info-section h3 {
+      margin-top: 0;
+      color: #a0522d;
+    }
+
+    .info-section p {
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    .source {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+        <div class="container">
+            <a class="btn custom-btn" href="index.html">
+                <span class="navbar-brand-text">
+                    Data Centers
+                    <small>and Environment</small>
+                </span>
+            </a>
+
+            <div class="btn custom-btn">
+                <ul class="btn custom-btn">
+                    <li class="btn custom-btn">
+                        <a class="btn custom-btn" href="energy.html#section_!">Energy_Consumption</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+  <h2>Global Electricity Demand (2019–2026)</h2>
+  <div class="chart-container">
+    <canvas id="electricityDemandChart"></canvas>
+  </div>
+
+  <div class="info-section">
+    <h3>About the Data</h3>
+    <p>
+      Global electricity consumption by data centres, crypto, and AI is expected to more than double by 2026.
+      Demand from these sectors could reach over <strong>1000 TWh</strong> by 2026, up from around <strong>460 TWh</strong> in 2022.
+    </p>
+    <p>
+      The chart above shows three forecast cases:
+      <ul>
+        <li><strong>Low Case</strong>: Slower AI adoption, energy efficiency improvements, and reduced crypto mining lead to moderate growth.</li>
+        <li><strong>Base Case</strong>: Expected growth based on current trends in data centre expansion, AI development, and cryptocurrency activity.</li>
+        <li><strong>High Case</strong>: Aggressive growth in AI and digital services, with minimal regulatory or efficiency checks.</li>
+      </ul>
+    </p>
+    <p>
+      This increasing demand is driven by rapid expansion of data centres, cloud computing, cryptocurrency mining, and AI processing.
+      Regions with growing tech infrastructure may see the highest electricity loads, potentially impacting power grids and sustainability efforts.
+    </p>
+    <p class="source"><em>Source: IEA, IEEFA, projections based on 2019–2026 electricity consumption trends.</em></p>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('electricityDemandChart').getContext('2d');
+
+    const labels = ['2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'];
+
+    const fullData = {
+      low:  [300, 330, 360, 460, 500, 540, 580, 610],
+      base: [300, 330, 360, 460, 520, 600, 700, 800],
+      high: [300, 330, 360, 460, 550, 680, 850, 1050]
+    };
+
+    const solidIndex = 4; // Until 2022
+
+    const colorPalette = {
+      low: '#ff9966',    // Warm peach
+      base: '#ff7f50',   // Coral
+      high: '#f4b400'    // Yellow
+    };
+
+    let chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [
+          {
+            label: 'Low case',
+            data: Array(labels.length).fill(null),
+            borderColor: colorPalette.low,
+            borderDash: [],
+            borderWidth: 3,
+            tension: 0.3,
+            fill: false
+          },
+          {
+            label: 'Base case',
+            data: Array(labels.length).fill(null),
+            borderColor: colorPalette.base,
+            borderDash: [],
+            borderWidth: 3,
+            tension: 0.3,
+            fill: false
+          },
+          {
+            label: 'High case',
+            data: Array(labels.length).fill(null),
+            borderColor: colorPalette.high,
+            borderDash: [],
+            borderWidth: 3,
+            tension: 0.3,
+            fill: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: { duration: 0 },
+        plugins: {
+          legend: { position: 'bottom', labels: { color: '#333' } }
+        },
+        scales: {
+          y: {
+            title: {
+              display: true,
+              text: 'TWh',
+              color: '#8b4513'
+            },
+            min: 0,
+            max: 1200,
+            ticks: {
+              stepSize: 200,
+              color: '#333'
+            }
+          },
+          x: {
+            ticks: { color: '#333' }
+          }
+        }
+      }
+    });
+
+    function animateSnake() {
+      let frame = 0;
+      const totalFrames = labels.length;
+      const frameDelay = 3000 / totalFrames;
+
+      chart.data.datasets.forEach(ds => ds.data.fill(null));
+      chart.update();
+
+      const interval = setInterval(() => {
+        if (frame >= totalFrames) {
+          clearInterval(interval);
+          return;
+        }
+
+        chart.data.datasets[0].data[frame] = fullData.low[frame];
+        chart.data.datasets[1].data[frame] = fullData.base[frame];
+        chart.data.datasets[2].data[frame] = fullData.high[frame];
+
+        chart.data.datasets.forEach(ds => {
+          ds.borderDash = frame < solidIndex ? [] : [6, 6];
+        });
+
+        chart.update();
+        frame++;
+      }, frameDelay);
+    }
+
+    animateSnake();
+    setInterval(animateSnake, 9000);
+  </script>
+
+</body>
+</html>
+
